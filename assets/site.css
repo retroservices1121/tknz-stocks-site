@@ -26,11 +26,12 @@ body {
   font-family: var(--font);
   font-size: 1rem;
   line-height: 1.65;
+  overflow-wrap: break-word;
 }
 
 img { max-width: 100%; height: auto; display: block; }
 
-a { color: var(--lime); text-underline-offset: 0.18em; }
+a { color: var(--lime); text-underline-offset: 0.18em; overflow-wrap: anywhere; }
 a:hover { text-decoration-thickness: 2px; }
 
 :focus-visible {
@@ -182,3 +183,6 @@ tbody th { font-weight: 600; }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
 }
+
+/* Let long URLs and tokens wrap inside cards and body text on narrow screens. */
+.card, .card p, main p, main li { overflow-wrap: anywhere; }

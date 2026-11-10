@@ -16,7 +16,7 @@ All internal links and assets are relative, so the site works under the `/tknz-s
 
 ## Contact
 
-A dedicated support email is not yet published. For support, privacy questions, or account deletion requests, please [open an issue](https://github.com/retroservices1121/tknz-stocks-site/issues). Issues are public — do not post one-time codes, private keys, or other secrets.
+A dedicated support email is not yet published. For support or privacy questions, please [open an issue](https://github.com/retroservices1121/tknz-stocks-site/issues). Issues are public — never post one-time codes, private keys, or other secrets, and do not post email addresses or phone numbers.
 
 Product notes: [@tknzstocks on X](https://x.com/tknzstocks).
 
