@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support — tknz Stocks</title>
+  <meta name="description" content="Support and FAQ for the tknz Stocks iOS app: sign-in, trades, fees, failed trades, eligibility, and account deletion.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/png" href="../assets/tknz-app-icon-1024.png">
+  <link rel="apple-touch-icon" href="../assets/tknz-app-icon-1024.png">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="../" aria-label="tknz Stocks home">tknz<span class="dot" aria-hidden="true">.</span><span class="product">Stocks</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="./" aria-current="page">Support</a></li>
+          <li><a href="../privacy/">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="wrap narrow">
+      <h1>Support</h1>
+      <p class="lede">Help for the tknz Stocks iOS app (<code>com.tknz.stocks</code>), developed by MOBI MEDIA, INC.</p>
+
+      <section aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact us</h2>
+        <div class="card">
+          <p>A dedicated support email is <strong>not yet published</strong>. The current way to reach us is to open an issue on this site’s public GitHub repository:</p>
+          <p><a href="https://github.com/retroservices1121/tknz-stocks-site/issues">Open a GitHub issue</a></p>
+          <p><strong>GitHub issues are public.</strong> Never post passwords, one-time codes, private keys, recovery phrases, or other secrets, and do not post your email address or phone number.</p>
+          <p>We also post product notes on X at <a href="https://x.com/tknzstocks">@tknzstocks</a>. X is not a substitute for a support request.</p>
+        </div>
+      </section>
+
+      <section class="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently asked questions</h2>
+
+        <h3>Wallet and sign-in</h3>
+        <details>
+          <summary>How do I sign in?</summary>
+          <p>tknz Stocks uses Coinbase Developer Platform (CDP) for sign-in. You can sign in with an email one-time code, an SMS one-time code, Google, or Apple. Signing in creates a Base EVM smart account for you.</p>
+        </details>
+        <details>
+          <summary>How do I sign out?</summary>
+          <p>Open the <strong>Account</strong> screen and tap <strong>Sign out</strong>.</p>
+        </details>
+
+        <h3>Trades</h3>
+        <details>
+          <summary>What can I trade?</summary>
+          <p>You can swap Base USDC for a Coinbase tokenized stock, and a tokenized stock back to USDC, on Base. Trades are executed through Coinbase Developer Platform (CDP) Trade.</p>
+          <p>Trading is only available when the eligibility gate clears (see <a href="#eligibility">Eligibility</a>). Otherwise the catalog is read-only.</p>
+        </details>
+        <details>
+          <summary>Is the NAV shown the price I’ll get?</summary>
+          <p>No. <code>nav_price</code> is a Chainlink total-return reference, not a live execution or swap price. Feeds can go stale outside market hours. One B20 token is not permanently one share; the share-equivalent count uses the current multiplier.</p>
+        </details>
+
+        <h3>Fees</h3>
+        <details>
+          <summary>What does tknz charge?</summary>
+          <p>A <strong>0.15% tknz fee</strong> is collected onchain on each trade. It is taken from the amount you pay, before the swap: an ERC-20 transfer of the fee in the token you pay, after which the swap uses only the remainder. The fee is included in the amount you pay, not added on top.</p>
+        </details>
+
+        <h3>Failed or unfinished trades</h3>
+        <details>
+          <summary>What happens if a trade doesn’t complete?</summary>
+          <p>An open swap attempt is kept visible in the app across restarts, so you can see it and follow up if a trade does not complete.</p>
+          <p>If you need help with an unfinished trade, <a href="https://github.com/retroservices1121/tknz-stocks-site/issues">open a GitHub issue</a>. You can include your smart account address and any transaction hash shown in the app (these are already public onchain). Never share one-time codes or secrets.</p>
+        </details>
+
+        <h3 id="eligibility">Eligibility and geo-restriction</h3>
+        <details>
+          <summary>Who can trade?</summary>
+          <p>Trading is offered under <strong>Regulation S</strong> to people <strong>outside the United States</strong>. U.S. persons and people in restricted jurisdictions cannot open a buy path.</p>
+          <ul>
+            <li>App Store storefronts exclude the United States and U.S. territories.</li>
+            <li>The in-app gate also blocks the United States, U.S. territories, Cuba, Iran, North Korea, and Syria.</li>
+            <li>If your country cannot be determined, the gate does not fail open.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>How does the app know my country?</summary>
+          <p>The app derives a coarse country from your IP address using Cloudflare, falling back to GeoJS. It does not use GPS or precise location.</p>
+        </details>
+
+        <h3>Account deletion</h3>
+        <details>
+          <summary>How do I delete my account?</summary>
+          <p><strong>In-app account deletion is not available yet.</strong> It is planned. Today the app offers sign-out only.</p>
+          <p>If you have questions about your account or data, including deletion, you can contact us by <a href="https://github.com/retroservices1121/tknz-stocks-site/issues">opening a GitHub issue</a>. GitHub issues are public: never post one-time codes or other secrets, and do not post your email address or phone number there.</p>
+          <p>Onchain transactions and other public blockchain data on Base cannot be erased.</p>
+          <p>See the <a href="../privacy/#deletion">Privacy Policy</a> for more.</p>
+        </details>
+      </section>
+
+      <section aria-labelledby="disclaimer-title">
+        <h2 id="disclaimer-title">Disclaimer</h2>
+        <div class="notice">
+          <p>This is not investment advice. tknz is not a broker-dealer, exchange, ATS, investment adviser, or bank, and nothing here is a solicitation to buy or sell securities. Secondary-market trades settle onchain on Base. Crypto and tokenized equities involve risk of loss.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="../privacy/">Privacy Policy</a></li>
+        <li><a href="https://github.com/retroservices1121/tknz-stocks-site/issues">Support issues</a></li>
+        <li><a href="https://x.com/tknzstocks">@tknzstocks on X</a></li>
+      </ul>
+      <p>© 2026 MOBI MEDIA, INC.</p>
+    </div>
+  </footer>
+</body>
+</html>
