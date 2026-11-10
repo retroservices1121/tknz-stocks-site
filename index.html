@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tknz Stocks — Coinbase tokenized stocks on Base</title>
+  <meta name="description" content="tknz Stocks is an iOS app to browse and hold Coinbase tokenized stocks (B20) on Base and swap with USDC when eligible outside the United States. Coming soon to the App Store.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/png" href="./assets/tknz-app-icon-1024.png">
+  <link rel="apple-touch-icon" href="./assets/tknz-app-icon-1024.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="./assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="./" aria-label="tknz Stocks home">tknz<span class="dot" aria-hidden="true">.</span><span class="product">Stocks</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="./" aria-current="page">Home</a></li>
+          <li><a href="./support/">Support</a></li>
+          <li><a href="./privacy/">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-mark" src="./assets/tknz-brand-mark.png" width="512" height="512" alt="tknz logo: white lowercase “tknz” with a lime dot on black">
+        <div>
+          <h1 id="hero-title">Tokenized stocks on Base</h1>
+          <p class="lede">tknz Stocks is an iOS app for browsing and holding Coinbase tokenized stocks (B20) on Base, and for swapping Base USDC for a tokenized stock when you are eligible outside the United States.</p>
+          <p><span class="badge">Coming soon to the App Store</span></p>
+          <p class="fine">The app is not yet available for download. Follow <a href="https://x.com/tknzstocks">@tknzstocks on X</a> for product notes.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="what-title">
+        <h2 id="what-title">What the app does</h2>
+        <ul class="features">
+          <li class="card"><h3>Browse the catalog</h3><p>Open the public catalog of Coinbase tokenized stocks on Base and search by symbol, name, or contract.</p></li>
+          <li class="card"><h3>Check a stock’s details</h3><p>See the symbol, B20 contract address, current multiplier, and the Chainlink total-return reference (not a live bid).</p></li>
+          <li class="card"><h3>Sign in with Coinbase Developer Platform</h3><p>Sign in via email, SMS, Google, or Apple through Coinbase Developer Platform (CDP) to create a Base smart account.</p></li>
+          <li class="card"><h3>Swap with USDC</h3><p>Swap Base USDC for a tokenized stock when the Regulation S eligibility gate clears. An open swap attempt stays visible across app restarts.</p></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="shots-title">
+        <h2 id="shots-title">Screens</h2>
+        <p class="fine">Pre-release previews. Screens marked “Sample” or “Preview” use sample data; nothing is sent in those previews.</p>
+        <ul class="shots">
+          <li>
+            <figure>
+              <img src="./assets/screenshots/markets.png" width="780" height="1688" loading="lazy" alt="Markets screen listing Coinbase tokenized stocks on Base, with a search field and each token’s Chainlink NAV or “No NAV”.">
+              <figcaption><strong>Browse the catalog</strong>Coinbase tokenized stocks on Base, identified by B20 address.</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="./assets/screenshots/stock-detail.png" width="780" height="1688" loading="lazy" alt="Stock detail screen showing the B20 contract on Base, a multiplier notice, and a Chainlink NAV reference labelled as not a live bid.">
+              <figcaption><strong>Symbol, contract, NAV reference</strong>NAV is a Chainlink total-return reference, not a live bid or swap price.</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="./assets/screenshots/preview-swap.png" width="780" height="1688" loading="lazy" alt="Sample swap quote paying 100 USDC, showing a 0.15% tknz fee of 0.15 USDC, 99.85 USDC swapped after the fee, expected and minimum amounts received.">
+              <figcaption><strong>USDC swap · 0.15% fee</strong>The fee is taken from the amount you pay, before the swap.</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="./assets/screenshots/preview-portfolio.png" width="780" height="1688" loading="lazy" alt="Sample portfolio screen showing USDC and a tokenized stock held on Base, with a reference value and the smart account address.">
+              <figcaption><strong>Holdings on Base</strong>Cash and tokenized stocks held in your Base smart account.</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="./assets/screenshots/preview-account.png" width="780" height="1688" loading="lazy" alt="Sample account screen showing a signed-in CDP smart account on Base, sign-in method, sign out, eligibility status, fee and settlement details.">
+              <figcaption><strong>CDP smart account</strong>Your Base smart account, sign-in method, and sign out.</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="fee-title">
+        <h2 id="fee-title">Fees</h2>
+        <div class="card">
+          <p>A <strong>0.15% tknz fee</strong> is collected onchain on each trade. It is taken from the amount you pay, before the swap: the app first makes an ERC-20 transfer of the fee in the token you pay, and the swap then uses only the remainder. The fee is included in the amount you pay, not added on top.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="eligibility-title">
+        <h2 id="eligibility-title">Who can trade</h2>
+        <div class="card">
+          <p>Trading is offered under <strong>Regulation S</strong> to people <strong>outside the United States</strong>. U.S. persons and people in restricted jurisdictions cannot open a buy path in the app.</p>
+          <ul>
+            <li>App Store storefronts exclude the United States and U.S. territories.</li>
+            <li>The in-app eligibility gate also blocks the United States, U.S. territories, Cuba, Iran, North Korea, and Syria.</li>
+            <li>If your country cannot be determined, the gate does not fail open.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="risk-title">
+        <h2 id="risk-title">Important — read before you trade</h2>
+        <div class="notice">
+          <ul>
+            <li><strong>This is not investment advice.</strong> tknz is not a broker-dealer, exchange, alternative trading system (ATS), investment adviser, or bank, and nothing here is a solicitation to buy or sell securities.</li>
+            <li>Secondary-market trades settle onchain on Base.</li>
+            <li>Crypto and tokenized equities involve risk of loss.</li>
+            <li>One B20 token is not permanently one share. The share-equivalent count uses the current multiplier, which can change with corporate actions.</li>
+            <li><code>nav_price</code> is a Chainlink total-return reference, not a live execution or swap price. Feeds can go stale outside market hours.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <ul>
+        <li><a href="./support/">Support</a></li>
+        <li><a href="./privacy/">Privacy Policy</a></li>
+        <li><a href="https://x.com/tknzstocks">@tknzstocks on X</a></li>
+      </ul>
+      <p>© 2026 MOBI MEDIA, INC. tknz Stocks is developed by MOBI MEDIA, INC.</p>
+      <p>Coinbase, Base, and other names are trademarks of their respective owners.</p>
+    </div>
+  </footer>
+</body>
+</html>
