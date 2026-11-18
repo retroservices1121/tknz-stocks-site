@@ -201,7 +201,7 @@
 
       <section aria-labelledby="deletion">
         <h2 id="deletion">Account deletion</h2>
-        <p>You can delete your account in the app. Open the <strong>Account</strong> screen, choose <strong>Delete account</strong>, and confirm by typing <strong>DELETE</strong>.</p>
+        <p>You can delete your account in the app. Open the <strong>Account</strong> screen, choose <strong>Delete account</strong>, and confirm by typing <strong>DELETE</strong>. The app then sends the deletion request to our server with a POST to <code>https://api.tknzstocks.com/v1/account-deletion</code>.</p>
         <p>When you delete your account:</p>
         <ul>
           <li>Our server verifies your signed-in Coinbase Developer Platform (CDP) session, revokes any delegated access tknz has to your wallet, and deletes the tknz account data we hold for your account.</li>

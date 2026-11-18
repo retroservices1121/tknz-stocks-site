@@ -97,7 +97,7 @@
         <h3>Account deletion</h3>
         <details>
           <summary>How do I delete my account?</summary>
-          <p>Open the <strong>Account</strong> screen, choose <strong>Delete account</strong>, and confirm by typing <strong>DELETE</strong>.</p>
+          <p>Open the <strong>Account</strong> screen, choose <strong>Delete account</strong>, and confirm by typing <strong>DELETE</strong>. The app then sends the deletion request to our server with a POST to <code>https://api.tknzstocks.com/v1/account-deletion</code>.</p>
           <p>tknz revokes any delegated access it has to your wallet, deletes the tknz account data it holds for your account, and records a request for tknz to have Coinbase remove your Coinbase Developer Platform (CDP) sign-in record. That removal is processed by tknz with Coinbase and is not instant. Until Coinbase removes the CDP sign-in record, signing in again with the same method may reopen the same wallet. After a successful deletion, tknz data is removed from your device and you are signed out.</p>
           <p><strong>Deletion does not move or delete your USDC or stock tokens.</strong> They stay in your self-custodial smart account on Base. If you do not want tokens left there, move them to another wallet you control before deleting your account.</p>
           <p>tknz never sees or stores your private keys. tknz is not a custodial wallet service and cannot sign for your account or move your funds.</p>
