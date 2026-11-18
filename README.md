@@ -1,6 +1,6 @@
 # tknz-stocks-site
 
-Public marketing, support, and privacy pages for **tknz Stocks**, an iOS app for browsing and holding Coinbase tokenized stocks on Base, developed by MOBI MEDIA, INC.
+Public marketing, support, and privacy pages for **tknz stocks**, an iOS app for browsing and holding Coinbase tokenized stocks on Base, developed by MOBI MEDIA, INC.
 
 This repository contains only the static public website (plain HTML and CSS, no build step). The app source code is private and is not in this repository.
 
@@ -28,7 +28,7 @@ Once the custom domain is enabled in this repository's GitHub Pages settings and
 
 ## Contact
 
-A dedicated support email is not yet published. For support or privacy questions, please [open an issue](https://github.com/retroservices1121/tknz-stocks-site/issues). Issues are public — never post one-time codes, private keys, or other secrets, and do not post email addresses or phone numbers.
+For support or privacy questions, including account deletion, email [support@mobimedia.co](mailto:support@mobimedia.co). You can also [open an issue](https://github.com/retroservices1121/tknz-stocks-site/issues). Issues are public — never post one-time codes, private keys, or other secrets, and do not post email addresses or phone numbers.
 
 Product notes: [@tknzstocks on X](https://x.com/tknzstocks).
 

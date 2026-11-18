@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Support — tknz Stocks</title>
-  <meta name="description" content="Support and FAQ for the tknz Stocks iOS app: sign-in, trades, fees, failed trades, eligibility, and account deletion.">
+  <title>Support — tknz stocks</title>
+  <meta name="description" content="Support and FAQ for the tknz stocks iOS app: sign-in, trades, fees, failed trades, eligibility, and account deletion.">
   <meta name="theme-color" content="#000000">
   <link rel="icon" type="image/png" href="../assets/tknz-app-icon-1024.png">
   <link rel="apple-touch-icon" href="../assets/tknz-app-icon-1024.png">
@@ -15,7 +15,7 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="wordmark" href="../" aria-label="tknz Stocks home">tknz<span class="dot" aria-hidden="true">.</span><span class="product">Stocks</span></a>
+      <a class="wordmark" href="../" aria-label="tknz stocks home">tknz<span class="dot" aria-hidden="true">.</span><span class="product">stocks</span></a>
       <nav class="site-nav" aria-label="Primary">
         <ul>
           <li><a href="../">Home</a></li>
@@ -29,13 +29,13 @@
   <main id="main" tabindex="-1">
     <div class="wrap narrow">
       <h1>Support</h1>
-      <p class="lede">Help for the tknz Stocks iOS app (<code>com.tknz.stocks</code>), developed by MOBI MEDIA, INC.</p>
+      <p class="lede">Help for the tknz stocks iOS app (<code>com.tknz.stocks</code>), developed by MOBI MEDIA, INC.</p>
 
       <section aria-labelledby="contact-title">
         <h2 id="contact-title">Contact us</h2>
         <div class="card">
-          <p>A dedicated support email is <strong>not yet published</strong>. The current way to reach us is to open an issue on this site’s public GitHub repository:</p>
-          <p><a href="https://github.com/retroservices1121/tknz-stocks-site/issues">Open a GitHub issue</a></p>
+          <p>Email us at <a href="mailto:support@mobimedia.co">support@mobimedia.co</a> for help with the app, your account, or your data, including account deletion.</p>
+          <p>You can also open an issue on this site’s public GitHub repository: <a href="https://github.com/retroservices1121/tknz-stocks-site/issues">Open a GitHub issue</a></p>
           <p><strong>GitHub issues are public.</strong> Never post passwords, one-time codes, private keys, recovery phrases, or other secrets, and do not post your email address or phone number.</p>
           <p>We also post product notes on X at <a href="https://x.com/tknzstocks">@tknzstocks</a>. X is not a substitute for a support request.</p>
         </div>
@@ -47,7 +47,8 @@
         <h3>Wallet and sign-in</h3>
         <details>
           <summary>How do I sign in?</summary>
-          <p>tknz Stocks uses Coinbase Developer Platform (CDP) for sign-in. You can sign in with an email one-time code, an SMS one-time code, Google, or Apple. Signing in creates a Base EVM smart account for you.</p>
+          <p>tknz stocks uses Coinbase Developer Platform (CDP) for sign-in. You can sign in with an email one-time code, an SMS one-time code, Google, or Apple. Signing in creates a Base EVM smart account for you.</p>
+          <p>The smart account is self-custodial. tknz never sees or stores your private keys. tknz is not a custodial wallet service and cannot sign for your account or move your funds.</p>
         </details>
         <details>
           <summary>How do I sign out?</summary>
@@ -75,7 +76,7 @@
         <details>
           <summary>What happens if a trade doesn’t complete?</summary>
           <p>An open swap attempt is kept visible in the app across restarts, so you can see it and follow up if a trade does not complete.</p>
-          <p>If you need help with an unfinished trade, <a href="https://github.com/retroservices1121/tknz-stocks-site/issues">open a GitHub issue</a>. You can include your smart account address and any transaction hash shown in the app (these are already public onchain). Never share one-time codes or secrets.</p>
+          <p>If you need help with an unfinished trade, email <a href="mailto:support@mobimedia.co">support@mobimedia.co</a> or <a href="https://github.com/retroservices1121/tknz-stocks-site/issues">open a GitHub issue</a>. You can include your smart account address and any transaction hash shown in the app (these are already public onchain). Never share one-time codes or secrets.</p>
         </details>
 
         <h3 id="eligibility">Eligibility and geo-restriction</h3>
@@ -96,9 +97,12 @@
         <h3>Account deletion</h3>
         <details>
           <summary>How do I delete my account?</summary>
-          <p><strong>In-app account deletion is not available yet.</strong> It is planned. Today the app offers sign-out only.</p>
-          <p>If you have questions about your account or data, including deletion, you can contact us by <a href="https://github.com/retroservices1121/tknz-stocks-site/issues">opening a GitHub issue</a>. GitHub issues are public: never post one-time codes or other secrets, and do not post your email address or phone number there.</p>
-          <p>Onchain transactions and other public blockchain data on Base cannot be erased.</p>
+          <p>Open the <strong>Account</strong> screen, choose <strong>Delete account</strong>, and confirm by typing <strong>DELETE</strong>. The app then sends the deletion request to our server with a POST to <code>https://api.tknzstocks.com/v1/account-deletion</code>.</p>
+          <p>Our server verifies your signed-in Coinbase Developer Platform (CDP) session, revokes any delegated access tknz has to your wallet, and deletes the tknz account data we hold for your account. tknz also records a request for tknz to have Coinbase remove your CDP sign-in record. That removal is processed by tknz with Coinbase and is not instant. Until Coinbase removes the CDP sign-in record, signing in again with the same method may reopen the same wallet. After a successful deletion, tknz data is removed from your device and you are signed out.</p>
+          <p><strong>Deletion does not move or delete your USDC or stock tokens.</strong> They stay in your self-custodial smart account on Base. If you do not want tokens left there, move them to another wallet you control before deleting your account.</p>
+          <p>tknz never sees or stores your private keys. tknz is not a custodial wallet service and cannot sign for your account or move your funds.</p>
+          <p>Past Base transactions are public and cannot be erased. Onchain transactions and other public blockchain data cannot be deleted.</p>
+          <p>You can also email <a href="mailto:support@mobimedia.co">support@mobimedia.co</a> about your account or data, including deletion.</p>
           <p>See the <a href="../privacy/#deletion">Privacy Policy</a> for more.</p>
         </details>
       </section>
