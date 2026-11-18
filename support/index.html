@@ -98,7 +98,7 @@
         <details>
           <summary>How do I delete my account?</summary>
           <p>Open the <strong>Account</strong> screen, choose <strong>Delete account</strong>, and confirm by typing <strong>DELETE</strong>. The app then sends the deletion request to our server with a POST to <code>https://api.tknzstocks.com/v1/account-deletion</code>.</p>
-          <p>tknz revokes any delegated access it has to your wallet, deletes the tknz account data it holds for your account, and records a request for tknz to have Coinbase remove your Coinbase Developer Platform (CDP) sign-in record. That removal is processed by tknz with Coinbase and is not instant. Until Coinbase removes the CDP sign-in record, signing in again with the same method may reopen the same wallet. After a successful deletion, tknz data is removed from your device and you are signed out.</p>
+          <p>Our server verifies your signed-in Coinbase Developer Platform (CDP) session, revokes any delegated access tknz has to your wallet, and deletes the tknz account data we hold for your account. tknz also records a request for tknz to have Coinbase remove your CDP sign-in record. That removal is processed by tknz with Coinbase and is not instant. Until Coinbase removes the CDP sign-in record, signing in again with the same method may reopen the same wallet. After a successful deletion, tknz data is removed from your device and you are signed out.</p>
           <p><strong>Deletion does not move or delete your USDC or stock tokens.</strong> They stay in your self-custodial smart account on Base. If you do not want tokens left there, move them to another wallet you control before deleting your account.</p>
           <p>tknz never sees or stores your private keys. tknz is not a custodial wallet service and cannot sign for your account or move your funds.</p>
           <p>Past Base transactions are public and cannot be erased. Onchain transactions and other public blockchain data cannot be deleted.</p>
@@ -121,7 +121,6 @@
       <ul>
         <li><a href="../">Home</a></li>
         <li><a href="../privacy/">Privacy Policy</a></li>
-        <li><a href="mailto:support@mobimedia.co">support@mobimedia.co</a></li>
         <li><a href="https://github.com/retroservices1121/tknz-stocks-site/issues">Support issues</a></li>
         <li><a href="https://x.com/tknzstocks">@tknzstocks on X</a></li>
       </ul>
