@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy — tknz Stocks</title>
-  <meta name="description" content="Privacy Policy for the tknz Stocks iOS app (com.tknz.stocks), operated by MOBI MEDIA, INC.">
+  <title>Privacy Policy — tknz stocks</title>
+  <meta name="description" content="Privacy Policy for the tknz stocks iOS app (com.tknz.stocks), operated by MOBI MEDIA, INC.">
   <meta name="theme-color" content="#000000">
   <link rel="icon" type="image/png" href="../assets/tknz-app-icon-1024.png">
   <link rel="apple-touch-icon" href="../assets/tknz-app-icon-1024.png">
@@ -15,7 +15,7 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="wordmark" href="../" aria-label="tknz Stocks home">tknz<span class="dot" aria-hidden="true">.</span><span class="product">Stocks</span></a>
+      <a class="wordmark" href="../" aria-label="tknz stocks home">tknz<span class="dot" aria-hidden="true">.</span><span class="product">stocks</span></a>
       <nav class="site-nav" aria-label="Primary">
         <ul>
           <li><a href="../">Home</a></li>
@@ -29,9 +29,9 @@
   <main id="main" tabindex="-1">
     <article class="wrap narrow">
       <h1>Privacy Policy</h1>
-      <p><strong>Effective date:</strong> <time datetime="2026-11-09">November 9, 2026</time></p>
+      <p><strong>Effective date:</strong> <time datetime="2026-11-18">November 18, 2026</time></p>
 
-      <p>This Privacy Policy explains what information the <strong>tknz Stocks</strong> iOS app (bundle identifier <code>com.tknz.stocks</code>) collects, how it is used, and who it is shared with. The app is operated by <strong>MOBI MEDIA, INC.</strong> (“we”, “us”).</p>
+      <p>This Privacy Policy explains what information the <strong>tknz stocks</strong> iOS app (bundle identifier <code>com.tknz.stocks</code>) collects, how it is used, and who it is shared with. The app is operated by <strong>MOBI MEDIA, INC.</strong> (“we”, “us”).</p>
 
       <nav aria-label="On this page" class="card">
         <p><strong>On this page</strong></p>
@@ -53,7 +53,8 @@
 
       <section aria-labelledby="about">
         <h2 id="about">About the app</h2>
-        <p>tknz Stocks lets you browse and hold Coinbase tokenized stocks (B20) on Base. You can view the public catalog without signing in. To trade, you sign in through Coinbase Developer Platform (CDP), which creates a Base smart account, and you can swap Base USDC for a tokenized stock when the eligibility gate clears.</p>
+        <p>tknz stocks lets you browse and hold Coinbase tokenized stocks (B20) on Base. You can view the public catalog without signing in. To trade, you sign in through Coinbase Developer Platform (CDP), which creates a Base smart account, and you can swap Base USDC for a tokenized stock when the eligibility gate clears.</p>
+        <p>Your smart account is self-custodial. tknz never sees or stores your private keys. tknz is not a custodial wallet service and cannot sign for your account or move your funds.</p>
       </section>
 
       <section aria-labelledby="collected">
@@ -195,19 +196,27 @@
       <section aria-labelledby="retention">
         <h2 id="retention">Retention</h2>
         <p>Sign-in data (such as your email address or phone number) and account data are held by Coinbase Developer Platform. We do not set CDP’s retention periods; please consult Coinbase’s privacy policy for how long CDP keeps this data.</p>
-        <p>Signing out ends your session in the app. We have not independently verified how third-party SDKs used by the app retain data on your device after the app is uninstalled. Neither signing out nor uninstalling deletes your CDP account — see <a href="#deletion">Account deletion</a>.</p>
+        <p>Signing out ends your session in the app. We have not independently verified how third-party SDKs used by the app retain data on your device after the app is uninstalled. Neither signing out nor uninstalling deletes your account. To delete it, use <strong>Delete account</strong> in the app — see <a href="#deletion">Account deletion</a>.</p>
       </section>
 
       <section aria-labelledby="deletion">
         <h2 id="deletion">Account deletion</h2>
-        <p><strong>In-app account deletion is not available yet.</strong> It is planned. Today the app offers sign-out only, from the Account screen.</p>
-        <p>If you have questions about your account or data, including deletion, you can contact us by <a href="https://github.com/retroservices1121/tknz-stocks-site/issues">opening a GitHub issue</a>. GitHub issues are public: never post one-time codes or other secrets, and do not post your email address or phone number there.</p>
-        <p>Onchain transactions and other public blockchain data cannot be deleted.</p>
+        <p>You can delete your account in the app. Open the <strong>Account</strong> screen, choose <strong>Delete account</strong>, and confirm by typing <strong>DELETE</strong>.</p>
+        <p>When you delete your account:</p>
+        <ul>
+          <li>Our server verifies your signed-in Coinbase Developer Platform (CDP) session, revokes any delegated access tknz has to your wallet, and deletes the tknz account data we hold for your account.</li>
+          <li>We record a request for tknz to have Coinbase remove your CDP sign-in record. CDP does not offer an instant delete for this record, so the request is processed by tknz with Coinbase and is not instant. Until Coinbase removes the CDP sign-in record, signing in again with the same method may reopen the same wallet.</li>
+          <li>After a successful deletion, tknz data is removed from your device and you are signed out.</li>
+        </ul>
+        <p><strong>Deletion does not move or delete your USDC or stock tokens.</strong> They stay in your self-custodial smart account on Base. If you do not want tokens left in that smart account, move them to another wallet you control before deleting your account.</p>
+        <p>tknz never sees or stores your private keys. tknz is not a custodial wallet service and cannot sign for your account or move your funds.</p>
+        <p>Past Base transactions are public and cannot be erased. Onchain transactions and other public blockchain data cannot be deleted.</p>
+        <p>You can also email <a href="mailto:support@mobimedia.co">support@mobimedia.co</a> about your account or data, including deletion.</p>
       </section>
 
       <section aria-labelledby="children">
         <h2 id="children">Children</h2>
-        <p>tknz Stocks is not directed at children, and we do not knowingly collect personal information from children.</p>
+        <p>tknz stocks is not directed at children, and we do not knowingly collect personal information from children.</p>
       </section>
 
       <section aria-labelledby="changes">
@@ -217,7 +226,8 @@
 
       <section aria-labelledby="contact">
         <h2 id="contact">Contact</h2>
-        <p>A dedicated privacy or support email is not yet published. To contact us about this policy or your data, <a href="https://github.com/retroservices1121/tknz-stocks-site/issues">open a GitHub issue</a>. Issues are public: never post secrets, and do not post your email address or phone number.</p>
+        <p>To contact us about this policy or your data, including account deletion, email <a href="mailto:support@mobimedia.co">support@mobimedia.co</a>.</p>
+        <p>You can also <a href="https://github.com/retroservices1121/tknz-stocks-site/issues">open a GitHub issue</a>. Issues are public: never post secrets or one-time codes, and do not post your email address or phone number.</p>
       </section>
     </article>
   </main>
