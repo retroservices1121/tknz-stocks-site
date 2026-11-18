@@ -2,7 +2,9 @@
 
 Public marketing, support, and privacy pages for **tknz stocks**, an iOS app for browsing and holding Coinbase tokenized stocks on Base, developed by MOBI MEDIA, INC.
 
-This repository contains only the static public website (plain HTML and CSS, no build step). The app source code is private and is not in this repository.
+This repository contains only the static public website (plain HTML, CSS, and one small vanilla JS file for optional scroll motion; no build step, no trackers). The app source code is private and is not in this repository.
+
+Fonts are self-hosted in `assets/fonts/` (Host Grotesk and Geist Mono, both SIL Open Font License 1.1; license texts alongside). Screenshots live in `assets/screens/` as WebP.
 
 ## Pages
 
