@@ -6,13 +6,25 @@ This repository contains only the static public website (plain HTML and CSS, no 
 
 ## Pages
 
-Once GitHub Pages is enabled (from the `main` branch root), the site will be served at:
+### Future canonical URLs
+
+These URLs become canonical after the custom domain is enabled and DNS points to GitHub Pages.
+
+- Landing — https://tknzstocks.com/
+- Support — https://tknzstocks.com/support/
+- Privacy Policy — https://tknzstocks.com/privacy/
+
+### Current GitHub Pages URLs
+
+These URLs stay live until the custom domain is enabled.
 
 - Landing: https://retroservices1121.github.io/tknz-stocks-site/
 - Support: https://retroservices1121.github.io/tknz-stocks-site/support/
 - Privacy Policy: https://retroservices1121.github.io/tknz-stocks-site/privacy/
 
-All internal links and assets are relative, so the site works under the `/tknz-stocks-site/` project path.
+All internal links and assets are already relative, so the site works both at the domain root and under `/tknz-stocks-site/`.
+
+Once the custom domain is enabled in this repository's GitHub Pages settings and DNS for `tknzstocks.com` points to GitHub Pages, GitHub will automatically redirect the old `github.io` URLs to the corresponding URLs on the custom domain.
 
 ## Contact
 
