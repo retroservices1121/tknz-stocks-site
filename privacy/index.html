@@ -65,7 +65,7 @@
         <section aria-labelledby="about">
           <h2 id="about">About the app</h2>
           <p>tknz stocks lets you browse and hold Coinbase tokenized stocks (B20) on Base. You can view the public catalog without signing in. To trade, you sign in through Coinbase Developer Platform (CDP), which creates a Base smart account, and you can swap Base USDC for a tokenized stock when the eligibility gate clears.</p>
-          <p>Your smart account is self-custodial. tknz never sees or stores your private keys. tknz is not a custodial wallet service and cannot sign for your account or move your funds.</p>
+          <p>Your smart account is self-custodial. The tknz app does not collect or store your wallet’s private keys. When you place a trade, the app can submit transactions through your signed-in wallet. If you gave tknz permission through Coinbase to act on your wallet’s behalf, tknz removes that access when it processes your deletion request.</p>
         </section>
 
         <section aria-labelledby="collected">
@@ -207,21 +207,22 @@
         <section aria-labelledby="retention">
           <h2 id="retention">Retention</h2>
           <p>Sign-in data (such as your email address or phone number) and account data are held by Coinbase Developer Platform. We do not set CDP’s retention periods; please consult Coinbase’s privacy policy for how long CDP keeps this data.</p>
-          <p>Signing out ends your session in the app. We have not independently verified how third-party SDKs used by the app retain data on your device after the app is uninstalled. Neither signing out nor uninstalling deletes your account. To delete it, use <strong>Delete account</strong> in the app — see <a href="#deletion">Account deletion</a>.</p>
+          <p>Signing out ends your session in the app. We have not checked for ourselves what the third-party software built into the app keeps on your device after you uninstall it. Signing out or uninstalling the app does not delete your account. To delete it, use <strong>Delete account</strong> on the <strong>Account</strong> screen in the app — see <a href="#deletion">Account deletion</a>.</p>
         </section>
 
         <section aria-labelledby="deletion">
           <h2 id="deletion">Account deletion</h2>
-          <p>You can delete your account in the app. Open the <strong>Account</strong> screen, choose <strong>Delete account</strong>, and confirm by typing <strong>DELETE</strong>. The app then sends the deletion request to our server with a POST to <code>https://api.tknzstocks.com/v1/account-deletion</code>.</p>
+          <p>You can delete your account in the app while you are signed in. Open the <strong>Account</strong> screen and tap <strong>Delete account</strong>. Type <strong>DELETE</strong> to confirm, then tap <strong>Delete account</strong> again. To back out before submitting, tap <strong>Cancel</strong>.</p>
           <p>When you delete your account:</p>
           <ul>
-            <li>Our server verifies your signed-in Coinbase Developer Platform (CDP) session, revokes any delegated access tknz has to your wallet, and deletes the tknz account data we hold for your account.</li>
-            <li>We record a request for tknz to have Coinbase remove your CDP sign-in record. CDP does not offer an instant delete for this record, so the request is processed by tknz with Coinbase and is not instant. Until Coinbase removes the CDP sign-in record, signing in again with the same method may reopen the same wallet.</li>
-            <li>After a successful deletion, tknz data is removed from your device and you are signed out.</li>
+            <li>tknz deletes the account data it stores on its server and removes any access you gave tknz through Coinbase to act on your wallet’s behalf.</li>
+            <li>tknz keeps a record of your request so its team can ask Coinbase to remove your sign-in record. Until Coinbase removes it, signing in again with the same method may reopen the same wallet.</li>
+            <li>Once the tknz server accepts your request, the app tries to clear tknz data from this device and sign you out. The app tells you if either step can’t be completed.</li>
           </ul>
-          <p><strong>Deletion does not move or delete your USDC or stock tokens.</strong> They stay in your self-custodial smart account on Base. If you do not want tokens left in that smart account, move them to another wallet you control before deleting your account.</p>
-          <p>tknz never sees or stores your private keys. tknz is not a custodial wallet service and cannot sign for your account or move your funds.</p>
-          <p>Past Base transactions are public and cannot be erased. Onchain transactions and other public blockchain data cannot be deleted.</p>
+          <p>If the app is loading saved trade details or submitting a trade, wait for that step to finish, then try again. If the app can’t read the saved trade details, it pauses deletion to protect them. If the app shows a saved trade attempt, copy the wallet address and any trade references shown, then confirm you saved the details. If the app can’t confirm that the tknz server accepted your request, the app leaves your sign-in and device data in place. The server may already have processed some or all of the request, and it’s safe to try again.</p>
+          <p><strong>Deleting your account does not move or delete your USDC or stocks.</strong> They stay in your wallet, which you control. If you don’t want them left there, move them to another wallet you control before you delete your account.</p>
+          <p>The tknz app does not collect or store your wallet’s private keys. When you place a trade, the app can submit transactions through your signed-in wallet. If you gave tknz permission through Coinbase to act on your wallet’s behalf, tknz removes that access when it processes your deletion request.</p>
+          <p>Your past transactions are recorded on a public blockchain and cannot be erased.</p>
           <p>You can also email <a href="mailto:support@mobimedia.co">support@mobimedia.co</a> about your account or data, including deletion.</p>
         </section>
 

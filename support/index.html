@@ -74,7 +74,7 @@
           <details>
             <summary>How do I sign in?</summary>
             <p>tknz stocks uses Coinbase Developer Platform (CDP) for sign-in. You can sign in with an email one-time code, an SMS one-time code, Google, or Apple. Signing in creates a Base EVM smart account for you.</p>
-            <p>The smart account is self-custodial. tknz never sees or stores your private keys. tknz is not a custodial wallet service and cannot sign for your account or move your funds.</p>
+            <p>The smart account is self-custodial. The tknz app does not collect or store your wallet’s private keys. When you place a trade, the app can submit transactions through your signed-in wallet. If you gave tknz permission through Coinbase to act on your wallet’s behalf, tknz removes that access when it processes your deletion request.</p>
           </details>
           <details>
             <summary>How do I sign out?</summary>
@@ -128,11 +128,12 @@
           <h3 id="faq-deletion">Account deletion</h3>
           <details>
             <summary>How do I delete my account?</summary>
-            <p>Open the <strong>Account</strong> screen, choose <strong>Delete account</strong>, and confirm by typing <strong>DELETE</strong>. The app then sends the deletion request to our server with a POST to <code>https://api.tknzstocks.com/v1/account-deletion</code>.</p>
-            <p>Our server verifies your signed-in Coinbase Developer Platform (CDP) session, revokes any delegated access tknz has to your wallet, and deletes the tknz account data we hold for your account. tknz also records a request for tknz to have Coinbase remove your CDP sign-in record. That removal is processed by tknz with Coinbase and is not instant. Until Coinbase removes the CDP sign-in record, signing in again with the same method may reopen the same wallet. After a successful deletion, tknz data is removed from your device and you are signed out.</p>
-            <p><strong>Deletion does not move or delete your USDC or stock tokens.</strong> They stay in your self-custodial smart account on Base. If you do not want tokens left there, move them to another wallet you control before deleting your account.</p>
-            <p>tknz never sees or stores your private keys. tknz is not a custodial wallet service and cannot sign for your account or move your funds.</p>
-            <p>Past Base transactions are public and cannot be erased. Onchain transactions and other public blockchain data cannot be deleted.</p>
+            <p>While signed in, open the <strong>Account</strong> screen and tap <strong>Delete account</strong>. Type <strong>DELETE</strong> to confirm, then tap <strong>Delete account</strong> again.</p>
+            <p>tknz deletes the account data it stores on its server and removes any access you gave tknz through Coinbase to act on your wallet’s behalf. tknz keeps a record of your request so its team can ask Coinbase to remove your sign-in record. Until Coinbase removes it, signing in again with the same method may reopen the same wallet. Once the tknz server accepts your request, the app tries to clear tknz data from this device and sign you out. The app tells you if either step can’t be completed.</p>
+            <p>If the app is loading saved trade details or submitting a trade, wait for that step to finish, then try again. If the app can’t read the saved trade details, it pauses deletion to protect them. If the app shows a saved trade attempt, copy the wallet address and any trade references shown, then confirm you saved the details. If the app can’t confirm that the tknz server accepted your request, the app leaves your sign-in and device data in place. The server may already have processed some or all of the request, and it’s safe to try again.</p>
+            <p><strong>Deleting your account does not move or delete your USDC or stocks.</strong> They stay in your wallet, which you control. If you don’t want them left there, move them to another wallet you control before you delete your account.</p>
+            <p>The tknz app does not collect or store your wallet’s private keys. When you place a trade, the app can submit transactions through your signed-in wallet. If you gave tknz permission through Coinbase to act on your wallet’s behalf, tknz removes that access when it processes your deletion request.</p>
+            <p>Your past transactions are recorded on a public blockchain and cannot be erased.</p>
             <p>You can also email <a href="mailto:support@mobimedia.co">support@mobimedia.co</a> about your account or data, including deletion.</p>
             <p>See the <a href="../privacy/#deletion">Privacy Policy</a> for more.</p>
           </details>
